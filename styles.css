@@ -194,7 +194,7 @@ main {
 
 .webskills {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 0 15%;
 }
 
@@ -221,7 +221,13 @@ main {
     font-size: 4rem;
     color: var(--blue-dk);
     text-shadow: 2px 2px #82a08f78;
-
+    text-align: center;
+}
+#greensock {
+    background-image: url("images/greensock.svg");
+    background-repeat: no-repeat;
+    height: 4rem;
+    width: 4rem;
 }
 
 
