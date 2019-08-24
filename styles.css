@@ -1,0 +1,233 @@
+
+
+* {
+    text-decoration: none;
+}
+body {
+    background-color: #b3d7c3;
+    margin: 0;
+    padding: 0;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    color:#282e4b;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 40px;
+
+}
+h2, h3 {
+    font-family: 'Sanchez', serif;
+    margin-top: 0;
+    margin-bottom: 25px;
+    color:  #f15f56cc;
+}
+h3 {
+    font-size: 28px;
+
+}
+/* HEADER STYLES */
+header {
+   
+    background-image: url("images/bg_herringbone_tile.jpg");
+    background-color: #25304c;
+    background-blend-mode: color-burn;
+    background-image: url("images/bg_herringbone_tile.jpg");
+    display: grid;
+    grid-template-columns: 1fr minmax(400px, 30%) 2%;
+    padding: 10px 25px;
+    height: 110px;
+    border-bottom: 6px solid #f15f56;
+}
+.logo {
+    background-image: url("images/hdwLogo.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin: 5px 0;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+.menu-item a {
+    font-family: Sanchez, serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color:#fef7e7;
+    padding: 5px 11px 0;
+}
+.menu-item img {
+    transition: .75s ease-out;
+}
+#homelink:hover + #homeimg,
+#graphicslink:hover + #graphicsimg,
+#illolink:hover + #illoimg,
+#wdlink:hover + #wdimg
+{
+  visibility: visible;
+  opacity: 1.0;
+  transform: translate(0px, -8px);
+  transition: .75s;
+  
+}
+
+#homeimg, #graphicsimg, #illoimg, #wdimg {
+    opacity: 0.0;
+    visibility: hidden;
+    transition: 0s;
+}
+
+/* MAIN CONTAINER STYLES */
+/* H1 SIDE STYLES */
+.main-container {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    padding: 40px 2%;
+}
+.main-container h1 {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+    color: #fef7e7;
+    opacity: 0.5;
+    font-size: 80px;
+    justify-self: center;
+}
+/* MAIN HERO STYLES */
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "illo illo profile"
+                        "gdesign gdesign profile"
+                        "wd wd profile";
+     grid-gap: 30px;                   
+
+}
+.hero {
+    padding: 25px;
+    border: 2px solid #fef7e7;
+    border-top-right-radius: 36px;
+    background-color: #b3d7c3;
+    background-image: url("images/leaf25.png");
+   
+    background-blend-mode: soft-light;
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+.illo {
+    grid-area: illo;
+}
+
+.gdesign {
+    grid-area: gdesign;
+}
+.webdev {
+    grid-area:wd;
+}
+
+.profile {
+    grid-area: profile;
+}
+
+.float-arc {
+    
+    float: right;
+    height: 300px;
+    width: 300px;
+    clip-path: circle(300px at 300px 1px);
+    shape-outside: circle(93% at 300px 1px);
+    margin: -25px -25px 25px 25px;
+}
+
+#asset3 {
+    background-image: url("images/asset3.png");
+}
+
+#asset2 {
+    background-image: url("images/asset2.png");
+}
+
+#assetx {
+    background-image: url("images/wdhead1.jpg");
+    background-color: #ecbbae;
+
+    border-radius: 15px;
+    border-top-right-radius: 36px;
+    background-position: center;
+    
+}
+#profile {
+    background-image: url("images/softProfile.jpg");
+    background-color: #ecbbae;
+    background-position: 68% 50%;
+    width: 90%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    border-radius: 15px;
+    border-top-right-radius: 36px;
+}
+.webskills {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+}
+.skillset li {
+    font-family: Sanchez, serif;
+    text-transform: uppercase;
+    margin-left: 25px;
+    color: #fef7e7;
+    line-height: 1.5;
+    text-shadow: 2px 2px #c8c8c8b3;
+    letter-spacing: 1px;
+}
+.skillset .fab {
+    font-size: 35px;
+    color: #282e4b;
+}
+
+
+.arc-wrap {
+    filter: drop-shadow(-5px 12px 8px rgba(132, 173, 150, 0.5));      
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    padding-top: 15px;
+}
+
+.social li {
+    width: 50px;
+    height: 50px;
+    background-color: #f15f56;
+    border-radius: 50%;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.social i {
+    color: #fef7e7;
+    font-size: 30px;
+}
