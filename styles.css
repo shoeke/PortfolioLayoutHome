@@ -119,7 +119,7 @@ nav {
 }
 /* MAIN HERO STYLES */
 
-main {
+.main-home {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -261,13 +261,41 @@ main {
 
 .patterns {
     display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(3, 1fr);
-    grid-gap: .5rem;
+    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-rows: repeat(3, 200px);
+    grid-gap: 2rem;
+    justify-content: center;
+    padding: 50px;
 }
 
 .patterns figure {
-    border: 2px solid var(--coral);
-    border-radius: 5%;
-
+    
 }
+.pattern-fig img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    clip-path: inset(50% 50% 0 0);
+    animation: clock-reveal .35s cubic-bezier(.17,.67,.8,.16) forwards;
+}
+@keyframes clock-reveal {
+    15% {
+      clip-path: polygon(16% 34%, 34% 42%, 50% 50%, 50% 100%, 0 100%, 0 25%);
+    }
+    32% {
+      clip-path: polygon(18% 18%, 36% 36%, 50% 50%, 50% 100%, 0 100%, 0 0);
+    }
+    48% {
+      clip-path: polygon(50% 0, 50% 25%, 50% 50%, 50% 100%, 0 100%, 0 0);
+    }
+    64% {
+      clip-path: polygon(100% 0, 75% 25%, 50% 50%, 50% 100%, 0 100%, 0 0);
+    }
+    82% {
+      clip-path: polygon(100% 0, 100% 50%, 50% 50%, 50% 100%, 0 100%, 0 0);
+    }
+    100% {
+     clip-path: polygon(100% 0, 100% 100%, 76% 100%, 50% 100%, 0 100%, 0 0);
+    }
+  }
