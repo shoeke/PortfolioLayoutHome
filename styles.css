@@ -261,11 +261,11 @@ nav {
 
 .patterns {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
-    grid-template-rows: repeat(3, 200px);
-    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fill, 300px);
+    grid-template-rows: repeat(3, 300px);
+    grid-gap: 150px;
     justify-content: center;
-    padding: 50px;
+    padding: 50px 0;
 }
 
 .patterns figure {
@@ -277,17 +277,24 @@ nav {
     object-fit: cover;
     border-radius: 50%;
     clip-path: inset(50% 50% 0 0);
-    animation: clock-reveal .35s cubic-bezier(.17,.67,.8,.16) forwards;
+    animation: clock-reveal .35s cubic-bezier(.17,.67,.8,.16);
+    animation-play-state: paused;
+}
+
+.pattern-fig img:hover {
+    animation-play-state: running;
 }
 @keyframes clock-reveal {
     15% {
       clip-path: polygon(16% 34%, 34% 42%, 50% 50%, 50% 100%, 0 100%, 0 25%);
+      transform: scale(1)
     }
     32% {
       clip-path: polygon(18% 18%, 36% 36%, 50% 50%, 50% 100%, 0 100%, 0 0);
     }
     48% {
       clip-path: polygon(50% 0, 50% 25%, 50% 50%, 50% 100%, 0 100%, 0 0);
+      transform: scale(1.25)
     }
     64% {
       clip-path: polygon(100% 0, 75% 25%, 50% 50%, 50% 100%, 0 100%, 0 0);
@@ -297,5 +304,6 @@ nav {
     }
     100% {
      clip-path: polygon(100% 0, 100% 100%, 76% 100%, 50% 100%, 0 100%, 0 0);
+     transform: scale(1.5)
     }
   }
